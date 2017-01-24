@@ -1,11 +1,9 @@
-import "angular2-meteor-polyfills";
+// create main entrypoint for app
+import 'angular2-meteor-polyfills';
 
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { enableProdMode } from "@angular/core";
-import { AppModule } from "./imports/app";
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-enableProdMode();
+import { AppModule } from './imports/app/app.module';
 
-Meteor.startup(() => {
-   platformBrowserDynamic().bootstrapModule(AppModule);
-});
+const platform = platformBrowserDynamic();
+platform.bootstrapModule(AppModule);
